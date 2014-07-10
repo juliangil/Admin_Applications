@@ -11,5 +11,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^hello/', 'adminApplications.views.hello'), 
 
-    url(r'^inicio/', 'adminApplications.views.inicio'),
+    # Activamos la url de los mediafiles
+
+    url(r'^', 'adminApplications.views.inicio'),
 ]
