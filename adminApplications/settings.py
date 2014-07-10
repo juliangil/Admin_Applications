@@ -84,10 +84,6 @@ USE_TZ = True
 
 MEDIA_ROOT = '/media/OS/Users/USUARIO/Mis documentos/JULIAN/ATHOM_HOUSE/DJANGO/Proyectos/adminApplications/adminApplications/static/imagenes'
 
-MEDIA_URL = '/media/'
-
-STATIC_URL = '/static/'
-
-STATIC_ROOT = '/media/OS/Users/USUARIO/Mis documentos/JULIAN/ATHOM_HOUSE/DJANGO/Proyectos/adminApplications/adminApplications/static'
-
-STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+       os.path.join(BASE_DIR, 'adminApplications/static'),
+    )
