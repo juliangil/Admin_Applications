@@ -14,7 +14,7 @@ class Device(models.Model):
 	tipo = models.ForeignKey(Tipo)
 
 	def __str__(self):
-		return self.nombre, self.estado
+		return self.nombre
 
 
 class Application(models.Model):

@@ -22,9 +22,9 @@ SECRET_KEY = 'oc@h5-ewv@u+h^$g2ge=!sa(8xz9!vsze&*jmi5(4jchgb9l1-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DIRS = (
-    "/media/OS/Users/USUARIO/Mis documentos/JULIAN/ATHOM_HOUSE/DJANGO/Proyectos/adminApplications/adminApplications/templates",
-    )
+TEMPLATE_DIRS = [
+    os.path.join(os.path.dirname(__file__) , 'templates').replace('\\','/')
+]
 
 ALLOWED_HOSTS = []
 
