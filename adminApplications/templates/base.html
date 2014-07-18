@@ -1,0 +1,33 @@
+<DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{% block title %}Admin Applications{% endblock%}</title>
+	<link rel="stylesheet" href="/static/css/estilo.css" />
+	<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet'>
+
+	<meta charset="UTF-8" />
+</head>
+<body>
+
+	<header id='contenido'>
+		<h1>Admin Applications</h1>
+		{% block nav %}
+		<nav>
+			<a href="{% url 'login' %}">Login</a>
+			<a href="#">Inicio</a>
+			<a href="{% url 'allApplications' %}">Applications</a>
+			<a href="{% url 'allDevices' %}">Devices</a>
+			<a href="{% url 'register' %}">Register</a>
+			<a href="{% url 'newDevice' %}">NewDevice</a>
+			<a href="{% url 'newApplication' %}">NewApplication</a>
+		</nav>
+		{% endblock %}
+	</header>
+
+	<section>
+		{% block content %}
+		{% endblock %}
+	</section>
+
+</body>
+</html>

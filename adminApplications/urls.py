@@ -13,15 +13,16 @@ urlpatterns = [
 
     # Activamos la url de los mediafiles
 
-    url(r'^inicio/', 'adminApplications.views.inicio'),
-    url(r'^register/', 'adminApplications.views.register'),
-    url(r'^newDevice/', 'adminApplications.views.newDevice'),
-    url(r'^newApplication/', 'adminApplications.views.newApplication'),
-    url(r'^allDevices/', 'adminApplications.views.allDevices'),
-    url(r'^allApplications/', 'adminApplications.views.allApplications'),
-    url(r'^oneDevice/', 'adminApplications.views.oneDevice'),
-    url(r'^oneApplication/', 'adminApplications.views.oneApplication'),
-    url(r'^installApplications/', 'adminApplications.views.installApplications'),
-    url(r'^deviceDetails/', 'adminApplications.views.deviceDetails'),
-    url(r'^applicationDetails/', 'adminApplications.views.applicationDetails'),
+    url(r'^login/', 'adminApplications.views.login', name='login'),
+    url(r'^inicio/', 'adminApplications.views.inicio', name='inicio'),
+    url(r'^register/', 'adminApplications.views.register', name='register'),
+    url(r'^newDevice/', 'adminApplications.views.newDevice', name='newDevice'),
+    url(r'^newApplication/', 'adminApplications.views.newApplication', name='newApplication'),
+    url(r'^allDevices/', 'adminApplications.views.allDevices', name='allDevices'),
+    url(r'^allApplications/', 'adminApplications.views.allApplications', name='allApplications'),
+    url(r'^oneDevice/', 'adminApplications.views.oneDevice', name='oneDevice'),
+    url(r'^oneApplication/', 'adminApplications.views.oneApplication', name='oneApplication'),
+    url(r'^installApplications/', 'adminApplications.views.installApplications', name='installApplications'),
+    url(r'^deviceDetails/', 'adminApplications.views.deviceDetails', name='deviceDetails'),
+    url(r'^applicationDetails/', 'adminApplications.views.applicationDetails', name='applicationDetails'),
 ]

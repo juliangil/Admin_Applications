@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Login and Registration Admin Applications{% endblock %}
+
+{% block content %} 
+	<div class="container">
+		<header>
+			<h1>Login and Registration Form </h1>
+        </header>
+        
+        <section>				
+        	<div id="textoPr" >
+        		<h2>Log in</h2> 
+        		<p> 
+        			<label class="uname"> Your email or username </label>                               
+                    <input id="username" name="username" required="required" type="text" placeholder="myusername or mymail@mail.com"/>
+                </p>
+                <p> 
+                	<label for="password" class="youpasswd"> Your password </label>
+                    <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" /> 
+                </p>
+                <p class="keeplogin">
+                	<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" /><label>Keep me logged in</label>
+				</p>
+                <p>
+                	<input type="submit" value="Login" id='btnSubmit' /> 
+				</p>
+			</div>
+		</section>
+	</div>
+{% endblock %}

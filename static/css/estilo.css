@@ -2,7 +2,47 @@ body
 {
 	background-color:#fff6f1; 
 	font-family: "Helvetica",Arial;
+}
+
+h1
+{
+	color: #3E75B9; /*naranja*/
+	font-family: 'Russo One', sans-serif;
 	text-align: center;
+}
+
+h2
+{
+	color: #3E75B9; /*naranja*/
+	font-family: 'Russo One', sans-serif;
+	text-align: left;
+	font-size: 30px;
+}
+
+a
+{
+	color: #3E75B9;
+	font-weight: bold; /*marcado de los links*/
+}
+
+label
+{
+	display: block;
+}
+
+#textoPr
+{
+	width: 300px;
+	height: 350px;
+	background-color: #B3D4FD;
+	color: #fff;
+	font-size: 20px;
+	font-family: 'Russo One', sans-serif;
+	margin: 0 auto;
+	text-align: left;
+	border-radius: 20px;
+	padding: 20px; /*arregla el border radius, se toma los mismos pixeles*/
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.9);/*red, green, blue, alfa*/
 }
 
 #contenido
@@ -12,139 +52,18 @@ body
 	text-align: center;
 }
 
-h1
-{
-	color: #e44e2d; /*naranja*/
-	font-family: 'Russo One', sans-serif;
-}
-
-header hgroup h1
-{
-	border-bottom: solid;
-	padding-bottom: 10px;
-	border-width: 1px;
-	border-color: #1d1d1d;
-	text-shadow: 0px 0px 30px rgba(0,0,0,0.5);
-}
-
-nav ul li
-{
-	/*display despliega de manera horizontal las listas*/
-	display: inline-block;
-	margin-right: 20px; /*20 px a la derecha de cada elemento*/
-	color: #1d1d1d; /*cambiamos el color de fondo*/
-	cursor: pointer; /*le decimos que cuando pase sobre el pueda darle clic pointer es la manito*/
-	padding: 5px;
-
-	transition: all 0.5s linear; /*transition recibe 3 parametros obligatorios, a que propiedad va aplicar la transicion, el tiempo, como va hacer la animacion*/
-	-webkit-transition: all 0.5s linear; /*transition no funciona en internet explorer*/
-	-moz-transition: all 0.5s linear;
-	-o-transition: all 0.5s linear;
-}
-
-nav ul li:hover /* hover: es una pseudoclase de CCS que sirve para que el estilo de los botonoes cambie cuando el usuario pase el raton por encima*/
-{
-	background-color: #1d1d1d;
-	color: #e44e2d;
-	border-radius: 5px; 
-}
-
-nav ul li a
-{
-	text-decoration: none; /*Con esta sentencia quitamos el subrayado de los links*/
-}
-
-#textoPr
-{
-	/*alto y anchura*/
-	width: 600px;
-	height: 300px;
-	background-color: #1d1d1d;
-	color: #fff;
-	margin: 0 auto;
-	text-align: left;
-	border-radius: 20px;
-	padding: 20px; /*arregla el border radius, se toma los mismos pixeles*/
-	box-shadow: 0px 0px 20px rgba(0,0,0,0.9);/*red, green, blue, alfa*/
-}
-
-a
-{
-	color: #e44e2d;
-	font-weight: bold; /*marcado de los links*/
-}
-
-#miCanvas
-{
-	position: absolute;
-	bottom: 0px; /*ponemos el canvas hacia abajo*/
-	left: 0px;
-	/*top: 0px;*/
-	/*border:solid;*/ 
-}
-
-meter
-{
-	background-color: #fff;
-	padding: 3px;
-	border-radius: 50px;
-	color: #e44e2d;
-	margin-left: 20px; 
-	width: 200px;
-}
-
-label
-{
-	display: block;
-}
-
 #btnSubmit
-{
+{	
 	font-family: 'Russo One', sans-serif;
 	border: none;
-	background-color: #fff;
-	color: #e44e2d;
-	padding: 4px;
+	background-color: #3E75B9;
+	color: #E0F8F1;
+	padding: 10px;
 	margin: 20px;
 	cursor: pointer;
+	border-radius: 15px;
 }
 
-#calificacion
-{
-	width: 150px;
-	-webkit-appearance:none; /*-webkit-appearance:none; Esta sentencia me ayuda a modificar todo, si no se pone grave*/
-	background-color: #fff;
-	height: 20px;
-	border-radius: 5px;
-	cursor: pointer;
-}
-
-#calificacion::-webkit-slider-thumb /*Modificamos la manija (slider) del tipo range*/
-{
-	-webkit-appearance:none; /*De nuevo que no cargue el de por defecto*/
-	background-color: #e44e2d;
-	border-radius: 10px;
-	height: 15px;
-	width: 10px;
-}
-
-#mediaC
-{
-	box-sizing:border-box;
-}
-
-.particion
-{
-	display: inline-block; /*Se ponen los elemento de manera vertical*/
-	width: 45%;
-}
-
-#mediaC audio
-{
-	width: 200px;
-}
-
-#mediaC video
-{
-	height: 180px;
+#container{
+	
 }
