@@ -3,6 +3,7 @@
 <head>
 	<title>{% block title %}Admin Applications{% endblock%}</title>
 	<link rel="stylesheet" href="/static/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="/static/css/estilo.css" />
 	<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet'>
 
 	<meta charset="UTF-8" />
@@ -16,7 +17,9 @@
 	</nav>
 
 	<header id='contenido'>
+		{% block encabezado %}
 		<h1>Admin Applications</h1>
+		{% endblock %}
 		{% block nav %}
 		<nav>
 			<a href="{% url 'login' %}">Login</a>

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Principal Page {% endblock %}
+
+{% block encabezado %}
+	<h1>Principal Page</h1>
+{% endblock %}
+ 
+{% block content %}
+<br><br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<img src="/static/img/computadores.jpg" class="img-thumbnail">
+		</div>
+
+		<div class="col-md-4" align='left'>
+			<a href="{% url 'nuevoUsuario' %}">Sign Up</a>
+		</div>
+	</div> 
+</div> 
+ 
+{% endblock %}

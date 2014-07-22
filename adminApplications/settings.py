@@ -41,6 +41,12 @@ INSTALLED_APPS = (
     'adminDeviceApp',
 )
 
+'''from django.core.urlresolver import reverse_lazy
+LOGIN_URL = reverse_lazy('login') # Dirigirme a una URL que tiene un nombre en especifico, en este caso login
+LOGIN_REDIRECT_URL = reverse_lazy('login') # Me redirecciona despues del logeo, pero como quiero que se quede en
+# la misma url dejamos login denuevo
+LOGOUT_URL = reverse_lazy('logout')'''
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
