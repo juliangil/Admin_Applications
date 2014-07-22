@@ -50,39 +50,49 @@ def nuevoUsuario(request):
     formulario = {'form': form,}
     return render_to_response('login2.html', formulario, context_instance=RequestContext(request))
 
+#En esta vista hemos hecho uso del decorador login_required() para indicar 
+#que dicha vista solo sera accesible para usuarios que hayan hecho el login 
+#correctamente, si un usuario intenta acceder a esta vista escribiendo la 
+#ruta y no ha iniciado sesion en el sitio sera redirigido a la variable 
+#LOGIN_URL que hemos definido anteriormente en el fichero settings.py.
 
-def login(request):
-    return render_to_response('login.html')
-
+@login_required()
 def inicio(request):
-    return render_to_response('inicio.html')
+    return render_to_response('inicio.html', {'user': request.user}, context_instance=RequestContext(request))
 
-def register(request):
-    return render_to_response('register.html')
 
-def newDevice(request):
-    return render_to_response('newDevice.html')
+def loginMuk(request):
+    return render_to_response('loginMuk.html')
 
-def newApplication(request):
-    return render_to_response('newApplication.html')
+def inicioMuk(request):
+    return render_to_response('inicioMuk.html')
 
-def allDevices(request):
-    return render_to_response('allDevices.html')
+def registerMuk(request):
+    return render_to_response('registerMuk.html')
 
-def allApplications(request):
-    return render_to_response('allApplications.html')
+def newDeviceMuk(request):
+    return render_to_response('newDeviceMuk.html')
 
-def oneDevice(request):
-    return render_to_response('oneDevice.html')
+def newApplicationMuk(request):
+    return render_to_response('newApplicationMuk.html')
 
-def oneApplication(request):
-    return render_to_response('oneApplication.html')
+def allDevicesMuk(request):
+    return render_to_response('allDevicesMuk.html')
 
-def installApplications(request):
-    return render_to_response('installApplications.html')
+def allApplicationsMuk(request):
+    return render_to_response('allApplicationsMuk.html')
 
-def deviceDetails(request):
-    return render_to_response('deviceDetails.html')
+def oneDeviceMuk(request):
+    return render_to_response('oneDeviceMuk.html')
 
-def applicationDetails(request):
-    return render_to_response('applicationDetails.html')
+def oneApplicationMuk(request):
+    return render_to_response('oneApplicationMuk.html')
+
+def installApplicationsMuk(request):
+    return render_to_response('installApplicationsMuk.html')
+
+def deviceDetailsMuk(request):
+    return render_to_response('deviceDetailsMuk.html')
+
+def applicationDetailsMuk(request):
+    return render_to_response('applicationDetailsMuck.html')

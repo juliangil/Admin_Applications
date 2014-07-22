@@ -47,6 +47,11 @@ LOGIN_REDIRECT_URL = reverse_lazy('login') # Me redirecciona despues del logeo, 
 # la misma url dejamos login denuevo
 LOGOUT_URL = reverse_lazy('logout')'''
 
+# Redirect when login is correct.
+LOGIN_REDIRECT_URL = "/inicio"
+# Redirect when login is not correct.
+LOGIN_URL = '/'
+
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

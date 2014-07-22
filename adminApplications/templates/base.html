@@ -17,26 +17,35 @@
 	</nav>
 
 	<header id='contenido'>
-		{% block encabezado %}
-		<h1>Admin Applications</h1>
-		{% endblock %}
-		{% block nav %}
-		<nav>
-			<a href="{% url 'login' %}">Login</a>
-			<a href="#">Inicio</a>
-			<a href="{% url 'allApplications' %}">Applications</a>
-			<a href="{% url 'allDevices' %}">Devices</a>
-			<a href="{% url 'register' %}">Register</a>
-			<a href="{% url 'newDevice' %}">NewDevice</a>
-			<a href="{% url 'newApplication' %}">NewApplication</a>
-		</nav>
-		{% endblock %}
+		<h1>{% block encabezado %}
+			Admin Applications
+		</h1>{% endblock %}
 	</header>
 
-	<section>
-		{% block content %}
+		<div class="row">
+		{% block nav %}
+			<div class="col-md-3" align='right'>
+				<h1>Muckups</h1>
+				<nav>
+					<ul class="nav nav-pills nav-stacked">
+						<li><a href="{% url 'loginMuk' %}">Login</a></li>
+						<li><a href="{% url 'inicioMuk' %}">Inicio</a></li>
+						<li><a href="{% url 'registerMuk' %}">New User</a></li>
+						<li><a href="{% url 'allApplicationsMuk' %}">Applications</a></li>
+						<li><a href="{% url 'allDevicesMuk' %}">Devices</a></li>
+						<li><a href="{% url 'newDeviceMuk' %}">NewDevice</a></li>
+						<li><a href="{% url 'newApplicationMuk' %}">NewApplication</a></li>
+					</ul>					
+				</nav>
+			</div>		
 		{% endblock %}
-	</section>
 
+			<div class="col-md-9">
+				<section>
+					{% block content %}
+					{% endblock %}
+				</section>
+			</div>
+		</div>
 </body>
 </html>

@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+{% block title %}Login and Registration Admin Applications{% endblock %}
+{% block encabezado %} 
+    Registration Admin Applications
+{% endblock %}
+
 {% block content %}
  
     {% if form.errors %}
@@ -11,7 +16,7 @@
         {% csrf_token %}
         <br><br><br>
         <div id="textoPr" >
-                <h2>Log in</h2> 
+                <h2>New User</h2> 
                 <p> 
                     <label class="uname"> Your email or username </label> 
                     <table>

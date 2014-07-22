@@ -1,6 +1,7 @@
 from django.conf.urls import include, url
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.auth.views import login
 admin.autodiscover()
 
 urlpatterns = [
@@ -16,38 +17,21 @@ urlpatterns = [
     url(r'^$','adminApplications.views.principal', name='principal'),
     url(r'^principal/','adminApplications.views.principal', name='principal'),
     url(r'^nuevoUsuario/$', 'adminApplications.views.nuevoUsuario', name='nuevoUsuario'),
-    #url(r'^login/$', login, {'template_name': 'login.html', }, name="login"),
+    url(r'^login$', login, {'template_name': 'login.html', }, name="login"),
+    url(r'^inicio$', 'adminApplications.views.inicio', name='inicio'),
+    
 
-    #url(r'^$', 'django.contrib.auth.views.login', {'template_name':'templates/login_auth'}, name='login_auth'),
-    #url(r'^$', 'django.contrib.auth.views.logout', name='logout_auth'),
-
-    url(r'^login/', 'adminApplications.views.login', name='login'),
-    url(r'^inicio/', 'adminApplications.views.inicio', name='inicio'),
-    url(r'^register/', 'adminApplications.views.register', name='register'),
-    url(r'^newDevice/', 'adminApplications.views.newDevice', name='newDevice'),
-    url(r'^newApplication/', 'adminApplications.views.newApplication', name='newApplication'),
-    url(r'^allDevices/', 'adminApplications.views.allDevices', name='allDevices'),
-    url(r'^allApplications/', 'adminApplications.views.allApplications', name='allApplications'),
-    url(r'^oneDevice/', 'adminApplications.views.oneDevice', name='oneDevice'),
-    url(r'^oneApplication/', 'adminApplications.views.oneApplication', name='oneApplication'),
-    url(r'^installApplications/', 'adminApplications.views.installApplications', name='installApplications'),
-    url(r'^deviceDetails/', 'adminApplications.views.deviceDetails', name='deviceDetails'),
-    url(r'^applicationDetails/', 'adminApplications.views.applicationDetails', name='applicationDetails'),
+    url(r'^loginMuk/', 'adminApplications.views.loginMuk', name='loginMuk'),
+    url(r'^inicioMuk/', 'adminApplications.views.inicioMuk', name='inicioMuk'),
+    url(r'^register/', 'adminApplications.views.registerMuk', name='registerMuk'),
+    url(r'^newDevice/', 'adminApplications.views.newDeviceMuk', name='newDeviceMuk'),
+    url(r'^newApplication/', 'adminApplications.views.newApplicationMuk', name='newApplicationMuk'),
+    url(r'^allDevices/', 'adminApplications.views.allDevicesMuk', name='allDevicesMuk'),
+    url(r'^allApplications/', 'adminApplications.views.allApplicationsMuk', name='allApplicationsMuk'),
+    url(r'^oneDevice/', 'adminApplications.views.oneDeviceMuk', name='oneDeviceMuk'),
+    url(r'^oneApplication/', 'adminApplications.views.oneApplicationMuk', name='oneApplicationMuk'),
+    url(r'^installApplications/', 'adminApplications.views.installApplicationsMuk', name='installApplicationsMuk'),
+    url(r'^deviceDetails/', 'adminApplications.views.deviceDetailsMuk', name='deviceDetailsMuk'),
+    url(r'^applicationDetails/', 'adminApplications.views.applicationDetailsMuk', name='applicationDetailsMuk'),
 
 ]
-
-'''
-    URLs PARA LOS MUCKUPS
-    url(r'^login/', 'adminApplications.views.login', name='login'),
-    url(r'^inicio/', 'adminApplications.views.inicio', name='inicio'),
-    url(r'^register/', 'adminApplications.views.register', name='register'),
-    url(r'^newDevice/', 'adminApplications.views.newDevice', name='newDevice'),
-    url(r'^newApplication/', 'adminApplications.views.newApplication', name='newApplication'),
-    url(r'^allDevices/', 'adminApplications.views.allDevices', name='allDevices'),
-    url(r'^allApplications/', 'adminApplications.views.allApplications', name='allApplications'),
-    url(r'^oneDevice/', 'adminApplications.views.oneDevice', name='oneDevice'),
-    url(r'^oneApplication/', 'adminApplications.views.oneApplication', name='oneApplication'),
-    url(r'^installApplications/', 'adminApplications.views.installApplications', name='installApplications'),
-    url(r'^deviceDetails/', 'adminApplications.views.deviceDetails', name='deviceDetails'),
-    url(r'^applicationDetails/', 'adminApplications.views.applicationDetails', name='applicationDetails'),
-    '''
